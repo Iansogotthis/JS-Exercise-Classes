@@ -1,4 +1,4 @@
-EXAMPLE TASK:
+/*EXAMPLE TASK:
     - Write an Airplane class whose constructor initializes `name` from an argument.
     - All airplanes built with Airplane should initialize with an `isFlying` property of false.
     - Give airplanes the ability to `.takeOff()` and `.land()`:
@@ -51,11 +51,7 @@ console.log(spencer.stomach);
 //poop
 spencer.poop();
 console.log(spencer.stomach);
-/*
-  TASK 2
-@@ -63,10 +96,33 @@ function Person() {
-        + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
-*/
+
 function Car() {
   function Car(model, milesperGallon) {
     this.model = model;
