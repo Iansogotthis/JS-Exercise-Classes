@@ -1,12 +1,10 @@
-/*
-  EXAMPLE TASK:
+EXAMPLE TASK:
     - Write an Airplane class whose constructor initializes `name` from an argument.
     - All airplanes built with Airplane should initialize with an `isFlying` property of false.
     - Give airplanes the ability to `.takeOff()` and `.land()`:
         + If a plane takes off, its `isFlying` property gets set to true.
         + If a plane lands, its `isFlying` property gets set to false.
 */
-
 // EXAMPLE SOLUTION CODE:
 class Airplane {
   constructor(name) {
@@ -20,7 +18,6 @@ class Airplane {
     this.isFlying = false;
   }
 }
-
 function Person() {
   function Person(name, age) {
     this.name = name;
@@ -33,42 +30,32 @@ Person.prototype.eat = function (edible) {
     this.stomach.push(edible);
   }
 };
-
 Person.prototype.poop = function () {
   this.stomach = [];
 };
 Person.prototype.toString = function () {
   return `${this.name}, ${this.age}`;
 };
-
 //creat my objects
-
 const cam = new Person("Cam", 20);
 const spencer = new Person("Spencer", 28);
-
 console.log(cam.toString());
 console.log(spencer.toString());
-
 //eat
 spencer.eat("Pizza");
 spencer.eat("Taco");
 spencer.eat("Sandwich");
 spencer.eat("Salad");
 spencer.eat("cake");
-
 console.log(spencer.stomach);
-
 //poop
 spencer.poop();
-
 console.log(spencer.stomach);
-
 /*
   TASK 2
 @@ -63,10 +96,33 @@ function Person() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
-
 function Car() {
   function Car(model, milesperGallon) {
     this.model = model;
@@ -77,12 +64,10 @@ function Car() {
     this.odometer = 0;
   }
 }
-
 Car.prototype.fill = function (gallons) {
   this.gallons = gallons;
   this.tank += gallons;
 };
-
 Car.prototype.drive = function (distance) {
   this.distance = distance;
   const drivableMiles = this.tank * this.milesperGallon;
@@ -93,7 +78,6 @@ Car.prototype.drive = function (distance) {
     this.tank = this.tank - distance / this.milesperGallon;
   }
 };
-
 /*
   TASK 3
 @@ -75,11 +131,18 @@ function Car() {
@@ -107,16 +91,13 @@ function Baby() {
   }
 }
 Baby.prototype = Object.create(Person.prototype);
-
 Baby.prototype.play = function () {
   return `Playing with ${this.favoriteToy}`;
 };
-
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo() {
   return "bar";
 }
-
 module.exports = {
   foo,
   Person,
